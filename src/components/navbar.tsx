@@ -27,6 +27,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import {ThemeToggle} from "@/components/Provider/ThemeToggle"
 
 interface MenuItem {
   title: string;
@@ -108,6 +109,7 @@ const Navbar = ({
             </div>
           </div>
           <div className="flex gap-2">
+            <ThemeToggle/>
             <Button asChild variant="outline" size="sm">
               <a href={auth.login.url}>{auth.login.title}</a>
             </Button>
