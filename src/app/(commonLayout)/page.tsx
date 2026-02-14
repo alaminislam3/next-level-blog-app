@@ -1,11 +1,11 @@
+import { blogService } from "@/services/blog.service";
 
-// import { Button } from "@/components/ui/button";
-
-
-export default function Home() {
+export default async function Home() {
+  const {data} =await blogService.getBlogPost()
+       console.log("take blog data" ,data)
   return (
-    <div className="">
-        <p>Button</p>
+    <div>
+      <h2>THis is home page </h2>
     </div>
   );
 }
